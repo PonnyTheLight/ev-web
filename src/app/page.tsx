@@ -7,26 +7,26 @@ import GameInfoComp from "./components/GameInfoComp";
 export default function Home() {
 
   return (
-    <main className="grid justify-center">
+    <main className="justify-center">
 
-      <section className="relative w-[90vw]">
+      <section className="relative w-[90%] justify-self-center">
         <Image src={'/images/mainImage.webp'} className="w-full rounded-lg mt-4 h-[700px] blur-sm object-cover" width={768} height={432} alt="mainImage" />
 
-        <div className="absolute top-1/2 left-1/2 w-[70%] transform -translate-x-1/2 -translate-y-1/2 text-6xl text-center">
+        <div className="absolute top-1/2 left-1/2 w-[95%] sm:w-[85%] transform -translate-x-1/2 -translate-y-1/2 text-6xl text-center">
           <h1 className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-100">La mejor experiencia</h1>
           <h1 className="font-bold bg-clip-text text-white">Emergencias Valladolid</h1>
           <p className="text-xl text-gray-400">Sumergete en una aventura unica por valladolid como Medico, Bombero, Policia entre otos equipos de emergencias y mantenimiento de la ciudad.</p>
 
-          <div className="lg:grid grid-cols-2 gap-2 justify-center mt-6">
-            <Link className="text-xl bg-blue-700 border-2 border-blue-200 text-white p-2 px-4 rounded-xl" target="_blank" href={'https://www.roblox.com/games/18377062010/ALPHA-Emergency-Valladolid'} >Jugar EV</Link>
-            <Link className="text-xl bg-transparent border-2 border-inherit border-white text-white p-2 px-4 rounded-xl" target="_blank" href={'https://www.youtube.com/watch?v=BdkQACMQZPo&ab_channel=Vairos'} >Trailer</Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 justify-center mt-6">
+            <Link className="text-xl w-full bg-blue-700 border-2 border-blue-200 text-white p-2 px-4 rounded-xl mr-2" target="_blank" href={'https://www.roblox.com/games/18377062010/ALPHA-Emergency-Valladolid'} >Jugar EV</Link>
+            <Link className="text-xl bg-transparent w-full border-2 border-inherit border-white text-white p-2 px-4 rounded-xl" target="_blank" href={'https://www.youtube.com/watch?v=BdkQACMQZPo&ab_channel=Vairos'} >Trailer</Link>
           </div>
         </div>
       </section>
 
       <GameInfoComp />
 
-      <section className="text-center w-[90vw] justify-center my-12">
+      <section className="text-center w-[90%] justify-center my-12 justify-self-center">
         <h1 className="text-2xl mb-2">¡ESTE ES NUESTRO EQUIPO!</h1>
         <div className="flex gap-12 flex-wrap justify-center">
           <div>
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-gray-200 p-4 px-4 rounded-t-xl">
+      <footer className="bg-gray-200 p-4 px-4 rounded-t-xl w-[90%] justify-self-center">
         <p className="text-end">&copy; All right reserved. Vairos Productions</p>
       </footer>
     </main>

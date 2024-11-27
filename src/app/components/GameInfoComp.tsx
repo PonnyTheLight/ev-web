@@ -30,21 +30,21 @@ export default function GameInfoComp() {
     <section className='flex flex-col justify-center text-center my-12'>
         <h1 className='text-2xl'>¡NUESTROS USUARIOS DECIDEN!</h1>
         <p className='text-lg text-gray-500'>Nuestro usuarios deciden si nuestro juego cumple lo que promete.</p>
-        <div className='grid grid-cols-4 text-center mt-6'>
+        <div className='grid grid-cols-2 sm:grid-cols-4 text-center mt-6'>
             <div>
-                <h1 className='text-blue-600 text-2xl'>{info?.place.visits}</h1>
+                <h1 className='text-blue-600 text-2xl mt-4 sm:mt-0'>{info?.place.visits}</h1>
                 <h1>Visitas</h1>
             </div>
             <div>
-                <h1 className='text-blue-600 text-2xl'>{info?.place.playing}</h1>
+                <h1 className='text-blue-600 text-2xl mt-4 sm:mt-0'>{info?.place.playing}</h1>
                 <h1>Jugando</h1>
             </div>
             <div>
-                <h1 className='text-blue-600 text-2xl'>{info?.place.favoritedCount}</h1>
+                <h1 className='text-blue-600 text-2xl mt-4 sm:mt-0'>{info?.place.favoritedCount}</h1>
                 <h1 className=''>Favoritos</h1>
             </div>
             <div>
-                <h1 className='text-blue-600 text-2xl'>{info?.votes.upVotes}</h1>
+                <h1 className='text-blue-600 text-2xl mt-4 sm:mt-0'>{info?.votes.upVotes}</h1>
                 <h1 className=''>Likes</h1>
             </div>
         </div>
