@@ -1,95 +1,53 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
+import { useEffect } from "react";
+
+import GameInfoComp from "./components/GameInfoComp";
+
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  return (
+    <main className="grid justify-center">
+
+      <section className="relative w-[90vw]">
+        <Image src={'/images/mainImage.webp'} className="w-full rounded-lg mt-4 h-[700px] blur-sm object-cover" width={768} height={432} alt="mainImage" />
+
+        <div className="absolute top-1/2 left-1/2 w-[70%] transform -translate-x-1/2 -translate-y-1/2 text-6xl text-center">
+          <h1 className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-100">La mejor experiencia</h1>
+          <h1 className="font-bold bg-clip-text text-white">Emergencias Valladolid</h1>
+          <p className="text-xl text-gray-400">Sumergete en una aventura unica por valladolid como Medico, Bombero, Policia entre otos equipos de emergencias y mantenimiento de la ciudad.</p>
+
+          <div className="lg:grid grid-cols-2 gap-2 justify-center mt-6">
+            <Link className="text-xl bg-blue-700 border-2 border-blue-200 text-white p-2 px-4 rounded-xl" target="_blank" href={'https://www.roblox.com/games/18377062010/ALPHA-Emergency-Valladolid'} >Jugar EV</Link>
+            <Link className="text-xl bg-transparent border-2 border-inherit border-white text-white p-2 px-4 rounded-xl" target="_blank" href={'https://www.youtube.com/watch?v=BdkQACMQZPo&ab_channel=Vairos'} >Trailer</Link>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <GameInfoComp />
+
+      <section className="text-center w-[90vw] justify-center my-12">
+        <h1 className="text-2xl mb-2">¡ESTE ES NUESTRO EQUIPO!</h1>
+        <div className="flex gap-12 flex-wrap justify-center">
+          <div>
+            <Image className="rounded-full bg-blue-500" src={'https://tr.rbxcdn.com/30DAY-AvatarHeadshot-2250B80B5CD4565BD2937127248E099D-Png/150/150/AvatarHeadshot/Webp/noFilter'} width={100} height={100} alt="UserProfile_zLowyG"></Image>
+            <Link href={'https://www.roblox.com/users/1680662240/profile'} className="text-blue-600">VairosOficial</Link>
+            <p className="text-gray-700">Game Founder</p>
+          </div>
+
+          <div>
+            <Image className="rounded-full bg-blue-500" src={'https://tr.rbxcdn.com/30DAY-AvatarHeadshot-1F90BA5025883AC55EF796736F31CC80-Png/150/150/AvatarHeadshot/Webp/noFilter'} width={100} height={100} alt="UserProfile_zLowyG"></Image>
+            <Link href={'https://www.roblox.com/users/2634949286/profile'} className="text-blue-600">zLowyG</Link>
+            <p className="text-gray-700">Web Developer</p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-gray-200 p-4 px-4 rounded-t-xl">
+        <p className="text-end">&copy; All right reserved. Vairos Productions</p>
       </footer>
-    </div>
+    </main>
   );
 }
