@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./page.module.css";
-import { useEffect } from "react";
 
 import GameInfoComp from "./components/GameInfoComp";
 

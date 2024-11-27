@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET() {
     try {
 
         const universeID = await fetch('https://apis.roblox.com/universes/v1/places/18377062010/universe', {
